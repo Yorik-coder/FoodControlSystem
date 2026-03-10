@@ -48,13 +48,13 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public ProductDto create(CreateProductRequest request) {
 
-     Product product = Product.builder()
-        .name(request.getName())
-        .calories(request.getCalories())
-        .protein(request.getProtein())
-        .fat(request.getFat())
-        .carbs(request.getCarbs())
-        .build();
+        Product product = Product.builder()
+            .name(request.getName())
+            .calories(request.getCalories())
+            .protein(request.getProtein())
+            .fat(request.getFat())
+            .carbs(request.getCarbs())
+            .build();
 
         Product saved = repository.save(product);
 
